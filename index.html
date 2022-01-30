@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, shrink-to-fit=yes">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Jogo da Velha</title>
+        <link rel="stylesheet" href="css/style.css">
+    </head>
+    <body>
+        
+        <div class='game'></div>
+        <button class="btn" onclick="jogo_da_velha.recomecar()" title="Recomecar">Recomecar jogo</button>
+
+        <script src="js/jogo-da-velha.js"></script>   
+        <script>
+            jogo_da_velha.iniciar_partida(
+                document.querySelector('.game')
+            )
+
+            jogo_da_velha.iniciar();
+        </script> 
+    </body>
+</html>

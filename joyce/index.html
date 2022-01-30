@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Exercisio 01</h1>
+    <p>Informe o preco do produto</p>
+    <input type="number" id="valorProduto">
+    <button onclick="execOne(document.getElementById('valorProduto').value)">Exercicio 01</button>
+    <br/>
+    <br/>
+
+    
+    <h2>Exercisio 02</h2>
+    <p>Informe o codigo do produto</p>
+    <input type="number" id="codigoProduto">
+    <p>Informe a quantidade do produto</p>
+    <input type="number" id="quantidadeProduto">
+    <button onclick="execTwo(document.getElementById('codigoProduto').value, document.getElementById('quantidadeProduto').value)"
+    >Exercicio 01</button>
+
+
+    <script>
+
+        function execOne(preco){
+            alert(preco)
+
+            //let preco = document.getElementById("valorProduto").value;
+
+            let percentual = [50, 100];
+
+            let classi = [80, 120, 200]
+
+            if(preco < percentual[0]){
+                console.log("Porcentagem - 5%")
+            }else if(preco >= percentual[1] && preco <= percentual[2]){
+                console.log("Percentual - 10%")
+            }else{
+                console.log("Percentual - 15%")
+            }
+
+            if(preco <= classi[0]){
+                console.log("Barato")
+            }else if(preco > classi[0] && preco <= classi[1]){
+                console.log("Normal")
+            }else if(preco > classi[1] && preco <= classi[2]){
+                console.log("Caro")
+            }else{
+                console.log("Muito caro")
+            }
+        }
+        
+        function execTwo(codigo, quantidade){
+            let codigoRes = [10, 20, 30, 40]
+
+            let notaTotal = [250, 500]
+
+            let total = 0;
+
+            if(codigo <= codigoRes[0]){
+                console.log("preco 10")
+
+                total += codigoRes[0] * quantidade;
+            }else if(codigo > codigoRes[0] && codigo <= codigoRes[1]){
+
+                console.log("preco 15")
+                total += codigoRes[1] * quantidade;
+
+            }else if(codigo > codigoRes[1] && codigo <= codigoRes[2]){
+
+                console.log("preco 20")
+                total += codigoRes[2] * quantidade;
+            }else{
+
+                console.log("preco 30")
+                total += codigoRes[3] * quantidade;
+            }
+
+            if(total <= notaTotal[0]){
+
+                console.log("Desconto 5%")
+            }else if(total > notaTotal[0] && total <= notaTotal[1]){
+
+                console.log("Desconto 10%")
+            }else{
+                
+                console.log("Desconto 15%")
+            }
+        }
+
+    </script>
+</body>
+</html>
